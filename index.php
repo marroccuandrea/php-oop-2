@@ -29,14 +29,14 @@ require_once __DIR__ . '/data/db.php';
             <div class="row row-cols-3">
                 <?php foreach ($foods as $food) : ?>
                     <div class="col">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 18rem; height: 100%;">
                             <img src="<?php echo $food->getImage() ?>" class="card-img-top">
                             <div class="card-body">
-                                <p class="card-title"><?php echo $food->getName() ?></p>
-                                <p class="card-title"><?php echo $food->getPrice() ?></p>
-                                <p class="card-title"><?php echo $food->getType() ?></p>
-                                <p class="card-title"><?php echo $food->getTaste() ?></p>
-                                <p class="card-title"><?php echo $food->getWeight() ?></p>
+                                <h5 class="card-title text-center"><?php echo $food->getName() ?></h5>
+                                <p class="card-title">Prezzo: <?php echo $food->getPrice() ?> &euro;</p>
+                                <p class="card-title">Alimento per <?php echo $food->getType() ?></p>
+                                <p class="card-title">Gusto: <?php echo $food->getTaste() ?></p>
+                                <p class="card-title">Peso: <?php echo $food->getWeight() ?> g</p>
 
                             </div>
                         </div>
@@ -51,14 +51,14 @@ require_once __DIR__ . '/data/db.php';
             <div class="row row-cols-3">
                 <?php foreach ($toys as $toy) : ?>
                     <div class="col">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 18rem; height: 100%;">
                             <img src="<?php echo $toy->getImage() ?>" class="card-img-top">
                             <div class="card-body">
-                                <p class="card-title"><?php echo $toy->getName() ?></p>
-                                <p class="card-title"><?php echo $toy->getPrice() ?></p>
-                                <p class="card-title"><?php echo $toy->getType() ?></p>
-                                <p class="card-title"><?php echo $toy->getMaterial() ?></p>
-                                <p class="card-title"><?php echo $toy->getSize() ?></p>
+                                <h5 class="card-title text-center"><?php echo $toy->getName() ?></h5>
+                                <p class="card-title">Prezzo: <?php echo $toy->getPrice() ?> &euro;</p>
+                                <p class="card-title">Gioco per: <?php echo $toy->getType() ?></p>
+                                <p class="card-title">Materiale: <?php echo $toy->getMaterial() ?></p>
+                                <p class="card-title">Taglia: <?php echo $toy->getSize() ?></p>
 
                             </div>
                         </div>
