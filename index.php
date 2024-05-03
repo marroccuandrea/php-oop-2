@@ -49,14 +49,21 @@ require_once __DIR__ . '/data/db.php';
         <h2>Toys shop: </h2>
         <div class="container my-4">
             <div class="row row-cols-3">
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <?php foreach ($toys as $toy) : ?>
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="<?php echo $toy->getImage() ?>" class="card-img-top">
+                            <div class="card-body">
+                                <p class="card-title"><?php echo $toy->getName() ?></p>
+                                <p class="card-title"><?php echo $toy->getPrice() ?></p>
+                                <p class="card-title"><?php echo $toy->getType() ?></p>
+                                <p class="card-title"><?php echo $toy->getMaterial() ?></p>
+                                <p class="card-title"><?php echo $toy->getSize() ?></p>
+
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
