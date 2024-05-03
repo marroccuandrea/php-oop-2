@@ -1,8 +1,9 @@
 <?php
 
+require_once __DIR__ . '/Model/Food.php';
+require_once __DIR__ . '/Model/Toy.php';
+require_once __DIR__ . '/Model/Products.php';
 require_once __DIR__ . '/data/db.php';
-require_once __DIR__ . '/Model/Cat-shop.php';
-require_once __DIR__ . '/Model/Dog-shop.php';
 
 
 ?>
@@ -20,12 +21,41 @@ require_once __DIR__ . '/Model/Dog-shop.php';
 <body>
     <div class="container my-5 text-center">
         <h1>Pets Shop</h1>
+
     </div>
     <div class="container my-5">
         <h2>Cats shop: </h2>
+        <div class="container my-4">
+            <div class="row row-cols-3">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text"></p>
+                            <p class="card-text"></p>
+                            <p class="card-text"></p>
+                            <p class="card-text"></p>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="container my-5">
         <h2>Dogs shop: </h2>
+        <div class="container my-4">
+            <div class="row row-cols-3">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
