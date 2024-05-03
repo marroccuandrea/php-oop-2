@@ -24,26 +24,29 @@ require_once __DIR__ . '/data/db.php';
 
     </div>
     <div class="container my-5">
-        <h2>Cats shop: </h2>
+        <h2>Food shop: </h2>
         <div class="container my-4">
             <div class="row row-cols-3">
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text"></p>
-                            <p class="card-text"></p>
-                            <p class="card-text"></p>
-                            <p class="card-text"></p>
-                            <p class="card-text"></p>
+                <?php foreach ($foods as $food) : ?>
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="<?php echo $food->getImage() ?>" class="card-img-top">
+                            <div class="card-body">
+                                <p class="card-title"><?php echo $food->getName() ?></p>
+                                <p class="card-title"><?php echo $food->getPrice() ?></p>
+                                <p class="card-title"><?php echo $food->getType() ?></p>
+                                <p class="card-title"><?php echo $food->getTaste() ?></p>
+                                <p class="card-title"><?php echo $food->getWeight() ?></p>
+
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
     <div class="container my-5">
-        <h2>Dogs shop: </h2>
+        <h2>Toys shop: </h2>
         <div class="container my-4">
             <div class="row row-cols-3">
                 <div class="col">
