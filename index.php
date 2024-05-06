@@ -30,7 +30,7 @@ require_once __DIR__ . '/data/db.php';
                 <?php foreach ($foods as $food) : ?>
                     <div class="col">
                         <div class="card" style="width: 18rem; height: 100%;">
-                            <img src="<?php echo $food->getImage() ?>" class="card-img-top">
+                            <img src="<?php echo $food->image ?>" class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title text-center"><?php echo $food->getName() ?></h5>
                                 <p class="card-title">Prezzo: <?php echo $food->getPrice() ?> &euro;</p>
