@@ -2,10 +2,10 @@
 
 class Products
 {
-    public $name;
-    public $price;
-    public $type;
-    public $image;
+    private $name;
+    private $price;
+    private $type;
+    private $image;
 
     public function __construct(string $_name, float $_price, string $_type, string $_image)
     {

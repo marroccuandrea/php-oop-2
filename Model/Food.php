@@ -3,6 +3,7 @@ require_once 'Products.php';
 
 class Food extends Products
 {
+    use Eco;
     public $weight;
     public $taste;
 
@@ -21,5 +22,13 @@ class Food extends Products
     public function getTaste()
     {
         return $this->taste;
+    }
+}
+
+trait Eco
+{
+    public function getEco()
+    {
+        return "Prodotti ecosostenibili";
     }
 }
