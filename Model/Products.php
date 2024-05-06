@@ -17,11 +17,18 @@ class Products
 
     public function getPrice()
     {
+        // Aggiunta Exception, che stampa questo messaggio in caso di prezzo = o < a 0
+        if ($this->price <= 0) {
+            throw new Exception("Prezzo non valido");
+        }
         return $this->price;
     }
 
     public function getName()
     {
+        if (empty($this->name)) {
+            throw new Exception("Prodotto senza nome");
+        }
         return $this->name;
     }
 
